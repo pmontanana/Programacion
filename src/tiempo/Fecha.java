@@ -75,11 +75,11 @@ public class Fecha {
     }
 
     public boolean validar(){
-        return dia>0||dia<32||mes>0||mes<13||ano>1899||ano<2051;
+        return mes > 0 && mes < 13 && dia > 0 && dia < diasMes(mes) && ano > 1899 && ano < 2051;
     }
 
     public void fechaCorta(){
-        System.out.println(dia+"-"+mes+"-"+ano); 
+        System.out.println(String.format("%02d-%02d-%04d", dia, mes, ano)); 
     }
 
     public void fechaLarga(){
@@ -97,8 +97,38 @@ public class Fecha {
 
     public void anterior(){
         dia--;
-        if (dia <= 1){
-            dia = 31;
+        if (dia < 1){
+            dia = diasMes(mes);
         }
+    }
+
+    public Fecha copiaFecha(){
+        return new Fecha(dia, mes, ano);
+    }
+
+    public boolean igualQue(Fecha temp){
+        return temp.dia == dia && temp.mes == mes && temp.ano == ano;
+    }
+
+    public boolean menorQue(Fecha temp){
+        if (ano < temp.ano){
+            return true;
+        }if (mes < temp.mes){
+            return true;
+        }if (dia < temp.dia){
+            return true;
+        }
+        return false;
+    }
+
+    public boolean mayorQue(Fecha temp){
+        if (ano > temp.ano){
+            return true;
+        }if (mes > temp.mes){
+            return true;
+        }if (dia > temp.dia){
+            return true;
+        }
+        return false;
     }
 }
