@@ -92,16 +92,13 @@ public class Fecha {
         dia++;
         if (dia > diasMes(mes)){
             dia = 1;
-        } {
-            
         }
     }
 
     public void anterior(){
+        dia--;
         if (dia <= 1){
             dia = 31;
-        }else {
-            dia--;
         }
     }
 }
