@@ -26,7 +26,7 @@ public class App {
     }
 
     public static void pruebaFechas() {
-        Fecha test = new Fecha(23, 12, 2004);
+        Fecha test = new Fecha(2, 12, 2004);
 
     
         System.out.println(test);
