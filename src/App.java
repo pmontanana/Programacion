@@ -1,5 +1,7 @@
 import tiempo.Hora;
 import tiempo.Fecha;
+import Libros.*;
+
 
 public class App {
     public static void pruebaHoras() {
@@ -40,8 +42,22 @@ public class App {
         System.out.println(test);
     }
 
+    public static void pruebaLibro(){
+        Persona autor1 = new Persona("Juan", "2182182F");
+        
+        Libro test = new Libro("El Quijote", autor1, "8219281", 12, "3ª", "Teide", "Albacete", new Fecha(23, 12, 1900));
+        Libro test2 = new Libro("El Quijote2", autor1, "8219282", 13, "4ª", "Teide", "Albacete", new Fecha(23, 12, 1900));
+        ListaLibros lista = new ListaLibros();
+        lista.anadirLibro(test);
+        lista.anadirLibro(test2);
+        lista.eliminarLibro("El Quijote");
+        
+    }
+
     public static void main(String[] args) {
-        // pruebaHoras();
-        pruebaFechas();
+        //pruebaHoras();
+        //pruebaFechas();
+        pruebaLibro();
+        
     }
 }
