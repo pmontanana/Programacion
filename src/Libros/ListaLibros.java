@@ -1,9 +1,9 @@
-package Libros;
-import Libros.*;
+package libros;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import javax.swing.SingleSelectionModel;
+import libros.*;
+
 
 public class ListaLibros {
     ArrayList<Libro> lista;
@@ -51,6 +51,12 @@ public class ListaLibros {
     public void listarLibros(){
         for(int i = 0; i < lista.size(); i++){
             System.out.println(lista.get(i));
+        }
+    }
+
+    public void listarTitulos(){
+        for(int i = 0; i < lista.size(); i++){
+            System.out.println(lista.get(i).getTitulo());
         }
     }
 }

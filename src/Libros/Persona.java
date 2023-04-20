@@ -1,4 +1,4 @@
-package Libros;
+package libros;
 
 public class Persona {
     String nombre, dni;

@@ -1,7 +1,7 @@
-package Libros;
+package libros;
 
+import libros.Persona;
 import tiempo.Fecha;
-import Libros.Persona;
 
 public class Libro {
     String titulo, ISBN, edicion, editorial, lugar;
