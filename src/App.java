@@ -1,6 +1,7 @@
 import tiempo.Hora;
 import libros.*;
 import tiempo.Fecha;
+import banco.Cuenta;
 
 
 public class App {
@@ -43,7 +44,7 @@ public class App {
     }
 
     public static void pruebaLibro(){
-        Persona autor1 = new Persona("Juan", "2182182F");
+        Persona autor1 = new Persona("Juan", 21821828);
         
         Libro test = new Libro("El Quijote", autor1, "8219281", 12, "3ª", "Teide", "Albacete", new Fecha(23, 12, 1900));
         Libro test2 = new Libro("El Quijote2", autor1, "8219282", 13, "4ª", "Teide", "Albacete", new Fecha(23, 12, 1900));
@@ -56,10 +57,31 @@ public class App {
         lista.listarLibros();
     }
 
+    public static void pruebaCuentas(){
+        Cuenta test = new Cuenta(12345678, 'X', 1000,42);
+        Cuenta test2 = new Cuenta(12345679, 'B', 2000, 23);
+        test.aplicaInteres();
+        test2.aplicaInteres();
+        System.out.println("* Despúes de aplicar interés");
+        test.muestraDatos();
+        test2.muestraDatos();
+        System.out.println("* Despúes de retirar interés");
+        test.retirar(1500);
+        test2.retirar(200);
+        test.muestraDatos();
+        test2.muestraDatos();
+        System.out.println("* Despúes de ingresar interés");
+        test.ingresar(200);
+        test2.ingresar(1000);
+        test.muestraDatos();
+        test2.muestraDatos();
+    }
+
     public static void main(String[] args) {
         //pruebaHoras();
         //pruebaFechas();
-        pruebaLibro();
+        //pruebaLibro();
+        pruebaCuentas();
         
     }
 }
