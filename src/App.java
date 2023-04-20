@@ -50,8 +50,10 @@ public class App {
         ListaLibros lista = new ListaLibros();
         lista.anadirLibro(test);
         lista.anadirLibro(test2);
-        lista.eliminarLibro("El Quijote");
-        
+        lista.listarLibros();
+        lista.eliminarLibro("El Quijote2");
+        lista.modificarDatos("El Quijote");
+        lista.listarLibros();
     }
 
     public static void main(String[] args) {

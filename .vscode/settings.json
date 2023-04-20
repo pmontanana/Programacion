@@ -7,5 +7,6 @@
     "liveshare.allowGuestDebugControl": true,
     "liveshare.allowGuestTaskControl": true,
     "liveshare.alwaysFollowHost": true,
-    "cmake.configureOnOpen": false
+    "cmake.configureOnOpen": false,
+    "java.debug.settings.onBuildFailureProceed": true
 }

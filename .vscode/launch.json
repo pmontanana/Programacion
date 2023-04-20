@@ -6,18 +6,13 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Launch External Terminal",
-            "request": "launch",
-            "console": "internalConsole",
-            "mainClass": "App"
-        },
-        {
-            "type": "java",
             "name": "App",
             "request": "launch",
+            "console": "internalConsole",
+            "internalConsoleOptions": "neverOpen",
             "mainClass": "App",
-            "projectName": "claseHora_874f6179"
         },
 
     ]
+    
 }
